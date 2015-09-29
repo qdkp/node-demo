@@ -1,0 +1,21 @@
+{
+  "base": "semantic\\",
+  "paths": {
+    "source": {
+      "config": "src/theme.config",
+      "definitions": "src/definitions/",
+      "site": "src/site/",
+      "themes": "src/themes/"
+    },
+    "output": {
+      "packaged": "../public/sui/",
+      "uncompressed": "../public/sui/components/",
+      "compressed": "../public/sui/components/",
+      "themes": "../public/sui/themes/"
+    },
+    "clean": "../public/sui/"
+  },
+  "permission": false,
+  "rtl": false,
+  "version": "2.1.4"
+}
