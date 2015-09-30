@@ -1,9 +1,8 @@
-doctype html
-html
-  head
-    title= message 
-    
-  body
-    h1= message
-    h2= error.status
-    pre #{error.stack}
+extends layout
+block title
+  title= message
+  
+block content
+  h1= message
+  h2= error.status
+  pre #{error.stack}

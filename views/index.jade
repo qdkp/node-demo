@@ -1,9 +1,11 @@
-doctype html
-html
-  head
-    title #{title}
-    link(rel="stylesheet" type="text/css" href="/sui/semantic.min.css")
-    
-  body
-    div(class="ui container")
-      button(class="ui primary button") Hello
+extends layout
+
+block title
+  title #{title}
+
+block stylesheets
+  link(rel="stylesheet" type="text/css" href="/sui/semantic.min.css")
+  
+block content
+  div(class="ui container")
+    button(class="ui primary button") This is a button
