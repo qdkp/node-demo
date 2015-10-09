@@ -1,0 +1,28 @@
+extends layout
+
+block title
+  title 文档
+  
+block stylesheets
+  link(rel="stylesheet" type="text/css" href="/sui/semantic.min.css")
+  link(rel="stylesheet" type="text/css" href="/css/docs.css")
+  link(rel="stylesheet" type="text/css" href="/css/highlight.css")
+  
+block content
+  div(class="ui borderless main menu")
+    div.ui.text.container 
+      a.item(href="/") 主页
+      a.ui.dropdown.item 
+        | 文档
+        i.dropdown.icon
+        div.menu
+          div.item NPM
+          div.item Node.js
+                
+  div(class="ui text container markdown")
+    != markdown
+    
+block javascripts
+  script(type="text/javascript" src="/js/jquery.js")
+  script(type="text/javascript" src="/sui/semantic.min.js")
+  script(type="text/javascript" src="/js/docs.js")

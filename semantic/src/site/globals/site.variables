@@ -4,3 +4,5 @@
 
 @importGoogleFonts: false;
 @absoluteBorderRadius: 0;
+@headerFont: @fontName, 'Helvetica Neue', Arial, Helvetica, 'Microsoft Yahei', sans-serif;
+@pageFont: @fontName, 'Helvetica Neue', Arial, Helvetica, 'Microsoft Yahei', sans-serif;

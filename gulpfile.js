@@ -56,6 +56,7 @@ gulp.task('server', function() {
     ],
     verbose: true,
     watch: [
+      'lib',
       'routes',
       'app.js'
     ]
