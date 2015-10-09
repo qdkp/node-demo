@@ -43,7 +43,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // 设置路由
-var router_index = require('./routes/index');
+var router_index = require('./lib/routes/index');
 app.use('/', router_index);
 
 // 404错误设置

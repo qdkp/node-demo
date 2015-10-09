@@ -1,5 +1,4 @@
 /node_modules
-/public/css
-/public/js
-/public/sui
+/public/*
+!/public/.gitkeep
 /npm-debug.log

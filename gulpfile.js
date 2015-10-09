@@ -11,16 +11,17 @@ gulp.task('default', ['watch', 'server']);
 /**
  * 监控javascripts/*和less/*.less文件
  */
-gulp.task('watch', ['uglify', 'less'], function() {
-  gulp.watch('javascripts/**/*.js', ['uglify']);
-  gulp.watch('less/**/*.less', ['less']);
+gulp.task('watch', ['uglify', 'less', 'images'], function() {
+  gulp.watch('assets/javascripts/**/*.js', ['uglify']);
+  gulp.watch('assets/less/**/*.less', ['less']);
+  gulp.watch('assets/img/**/*.*', ['images']);
 });
 
 /**
  * 编译less文件
  */
 gulp.task('less', function() {
-  return gulp.src('./less/*.less')
+  return gulp.src('./assets/less/*.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
@@ -32,12 +33,17 @@ gulp.task('less', function() {
  * 压缩javascripts文件
  */
 gulp.task('uglify', function() {
-  return gulp.src('./javascripts/**/*.js')
+  return gulp.src('./assets/javascripts/**/*.js')
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(uglify())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./public/js/'));
 });
+
+gulp.task('images', function() {
+  return gulp.src('./assets/img/**/*.+(jp?(e)g|gif|png)')
+    .pipe(gulp.dest('./public/img/'));
+})
 
 /**
  * 运行服务器程序， 进行调试
